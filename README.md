@@ -27,7 +27,7 @@ playsound==1.2.2
 
 Как запустить
 Клонируйте репозиторий:
-git clone <ссылка_на_ваш_репозиторий>
+git clone https://github.com/Mask0FDark/Nova-voice-assistant/tree/main
 
 скачайть все библеотки 
 для виндовс просто запустите setup.bat

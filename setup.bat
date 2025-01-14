@@ -1,0 +1,8 @@
+pip install fuzzywuzzy
+pip install vosk
+pip install sounddevice
+pip install silero
+pip install num2words
+pip install scipy
+pip install soundfile
+pip install playsound==1.2.2
