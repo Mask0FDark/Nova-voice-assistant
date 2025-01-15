@@ -2,7 +2,7 @@
 
 NOVA_TG_TOKEN='токен от @BotFather'
 
-NOVA_DIR='E:\\prog\\Nova vers\\Nova 1.3\\lnk'
+NOVA_DIR='E:\\git_hub\\Nova-voice-assistant\\Ink'
 
 NOVA_NAME = 'Нова'
 

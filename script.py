@@ -21,7 +21,7 @@ def execute_cmd(cmd: str):
         NOVA_youtube()
     elif cmd == 'funk':
         NOVA_youtube_funk()  
-    elif cmd == 'NOVA_steam':
+    elif cmd == 'steam':
         NOVA_steam()           
 
 '''
@@ -66,7 +66,7 @@ def NOVA_hi():
 #Ink script
 
 def NOVA_steam():
-   os.startfile (config.NOVA_DIR+"\\Steam.lnk")
+   os.startfile(config.NOVA_DIR+"\\Steam.lnk")
    play('ok')
 
 
