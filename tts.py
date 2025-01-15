@@ -27,12 +27,12 @@ def va_speak(what: str):
                             sample_rate=sample_rate,
                             put_accent=put_accent,
                             put_yo=put_yo)
-
-    sd.play(audio, sample_rate * 1.05)
-    time.sleep((len(audio) / sample_rate) + 0.5)
-    sd.stop()
-    output_file = 'sound/output.wav'
-    sf.write(output_file, audio, sample_rate)
+    if config.NOVA_SPEAK==1:
+        sd.play(audio, sample_rate * 1.05)
+        time.sleep((len(audio) / sample_rate) + 0.5)
+        sd.stop()
+        output_file = 'sound/output.wav'
+        sf.write(output_file, audio, sample_rate)
 
  
 # sd.play(audio, sample_rate)

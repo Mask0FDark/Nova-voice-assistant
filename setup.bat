@@ -6,3 +6,4 @@ pip install num2words
 pip install scipy
 pip install soundfile
 pip install playsound==1.2.2
+pip install aiogram==2.23.1

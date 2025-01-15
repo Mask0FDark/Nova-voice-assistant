@@ -6,8 +6,9 @@ from num2words import num2words
 import webbrowser
 import random
 from playsound import playsound
-import pyowm 
+import os
 #програма сделана Mask_0F_Darkness ❤️
+
 
 def execute_cmd(cmd: str):
     if cmd == 'help':
@@ -19,7 +20,9 @@ def execute_cmd(cmd: str):
     elif cmd == 'youtube':
         NOVA_youtube()
     elif cmd == 'funk':
-        NOVA_youtube_funk()             
+        NOVA_youtube_funk()  
+    elif cmd == 'NOVA_steam':
+        NOVA_steam()           
 
 '''
 elif cmd == '':
@@ -35,8 +38,11 @@ NOVA_CMD_LIST = {
     "help": ('список команд', 'команды', 'что ты умеешь', 'твои навыки', 'навыки'),
     "time": ('время', 'текущее время', 'сейчас времени', 'который час'),
     "hi":('привет','добрый день','здравствуй','преветствую'),
+#Ink
+    "steam":('стим','запусти стим',"с тем"),
 
-#далее для ссылки в ютубе
+
+#youtube
     "youtube":('ютуб','включи ютуб','открой ютуб'),
     "funk":('музыка','включи музыку','мызыка для кс 2')
 }
@@ -56,6 +62,14 @@ def NOVA_time():
 
 def NOVA_hi():
     play('hi')
+
+#Ink script
+
+def NOVA_steam():
+   os.startfile (config.NOVA_DIR+"\\Steam.lnk")
+   play('ok')
+
+
 
 #youtube script
 
@@ -92,7 +106,8 @@ def play(phrase, wait_done=True):
     elif phrase == "off":
         filename += "off.wav"
 
-    filename = filename.replace(' wait', "")
-    playsound(filename)
+    if config.NOVA_SPEAK==1:
+        filename = filename.replace(' wait', "")
+        playsound(filename)
 
 

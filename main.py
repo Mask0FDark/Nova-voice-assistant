@@ -5,14 +5,19 @@ import  script
 from fuzzywuzzy import fuzz
 import datetime
 from script import *
+import subprocess
+import time
 #програма сделана Mask_0F_Darkness ❤️
 
+subprocess.Popen("python telegramm_bot.py") 
+time.sleep(8)
 print(f"{config.NOVA_NAME} (v{config.NOVA_VER}) начал свою работу ...")
-#script.play('run')
+
+
 def va_respond(voice: str):
     voice_print = voice.replace('ного','нова')
     print(voice_print)
-    if voice.startswith(config.NOVA_ALIAS):
+    if voice.startswith(config.NOVA_ALIAS) and config.NOVA_HELPER==1:
         # обращаются к ассистенту
         cmd = recognize_cmd(filter_cmd(voice))
 
@@ -44,6 +49,4 @@ def recognize_cmd(cmd: str):
     return rc
 
 
-
-# начать прослушивание команд
 stt.va_listen(va_respond)
